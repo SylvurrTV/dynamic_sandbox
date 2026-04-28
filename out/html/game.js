@@ -15,6 +15,7 @@
 
     // Add your custom code here.
     window.enableDarkMode();
+    window.disableGrayMode
   };
 
   var TITLE = "Social Democracy: An Alternate History" + '_' + "Autumn Chen";
