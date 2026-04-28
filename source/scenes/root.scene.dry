@@ -10,6 +10,7 @@ go-to: start_menu_2
 
 @start_menu_2
 
+- @redirect: IF YOU DON'T SEE THE SANDBOX TAB BESIDE LIBRARY AND OPTIONS, CLICK HERE
 - @start_1: Start game
 - @modinfo: Mod Info - Last Updated 2026/01/25
 - @credits: Credits
@@ -17,15 +18,14 @@ go-to: start_menu_2
 
 @start_1
 on-arrival: player_beg = 1 if not achievement_game_completed
-go-to: start if achievement_game_completed; pls_player if not achievement_game_completed
+go-to: start
 
-
-@pls_player
-
-Read.
-
-- @modinfo.infotext: Mod Info - Last Updated 2026/01/25
-
+@redirect
+subtitle: The sandbox menu does not load from the mod menu, click to be redirected to the correct page.
+on-arrival: {!
+window.top.location.replace("https://spd.sylvurr.com");
+window.enableDarkMode();
+!}
 
 @start
 on-arrival: {!
