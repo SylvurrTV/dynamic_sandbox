@@ -1,4 +1,9 @@
-# Social Democracy: An Alternate History
+# Dynamic Sandbox
+Original Game: https://github.com/aucchen/social_democracy_alternate_history
+Dynamic (Not sandbox): https://github.com/originn0/dynamic_social_democracy
+
+#Add Sandbox To Your Mods
+Follow the tutorial document here! :D https://github.com/SylvurrTV/spd-sandbox
 
 ## Included Libraries
 
