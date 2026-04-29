@@ -1289,11 +1289,8 @@ Q.sapd_formed = 1;
 Formed the SAPD.
 
 @form_lvp
-go-to: miscparty
+go-to: lvp_formation
 view-if: lvp_formed == 0
-on-arrival: {!
-Q.lvp_formed = 1;
-!}
 
 Formed the LVP.
 
