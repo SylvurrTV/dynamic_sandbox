@@ -317,6 +317,8 @@ Decreased science by 1.
 - @decreasekpdrel: Decrease Relations With The KPD
 - @increaseddprel: Increase Relations With The DDP/DStP
 - @decreaseddprel: Decrease Relations With The DDP/DStP
+- @increaselvprel: Increase Relations With The LVP
+- @decreaselvprel: Decrease Relations With The LVP
 - @increasedvprel: Increase Relations With The DVP
 - @decreasedvprel: Decrease Relations With The DVP
 - @removedissent: Remove Coalition Dissent
@@ -327,6 +329,7 @@ Decreased science by 1.
 go-to: editrelations
 on-arrival: {!
 Q.coalition_dissent = 0;
+Q.kpd_coalition_dissent = 0;
 !}
 
 Removed coalition dissent.
@@ -335,6 +338,7 @@ Removed coalition dissent.
 go-to: editrelations
 on-arrival: {!
 Q.coalition_dissent = 5;
+Q.kpd_coalition_dissent = 5;
 !}
 
 Removed coalition dissent.
@@ -386,6 +390,22 @@ Q.ddp_relation -= 15;
 !}
 
 Decreased relations with the DDP.
+
+@increaselvprel
+go-to: editrelations
+on-arrival: {!
+Q.lvp_relation += 15;
+!}
+
+Increased relations with the LVP.
+
+@decreaselvprel
+go-to: editrelations
+on-arrival: {!
+Q.lvp_relation -= 15;
+!}
+
+Decreased relations with the LVP.
 
 @increasedvprel
 go-to: editrelations
@@ -1207,6 +1227,11 @@ Lowered Interior Police loyalty.
 - @ban_nsdap: Ban NSDAP
 - @unban_nsdap: Unban NSDAP
 - @form_sapd: Form SAPD (Requires High Internal Dissent)
+- @form_lvp: Form LVP
+- @form_cvp: Form CVP
+- @form_kvp: Form KVP
+- @form_dnef: Form DNEF
+- @form_dnf: Form DNF
 - @returnsandbox: Return To Sandbox Menu
 
 @allow_banning
@@ -1262,6 +1287,51 @@ Q.sapd_formed = 1;
 !}
 
 Formed the SAPD.
+
+@form_lvp
+go-to: miscparty
+view-if: lvp_formed == 0
+on-arrival: {!
+Q.lvp_formed = 1;
+!}
+
+Formed the LVP.
+
+@form_kvp
+go-to: miscparty
+view-if: kvp_formed == 0
+on-arrival: {!
+Q.kvp_formed = 1;
+!}
+
+Formed the KVP.
+
+@form_cvp
+go-to: miscparty
+view-if: cvp_formed == 0
+on-arrival: {!
+Q.cvp_formed = 1;
+!}
+
+Formed the CVP.
+
+@form_dnf
+go-to: miscparty
+view-if: dnf_formed == 0
+on-arrival: {!
+Q.dnf_formed = 1;
+!}
+
+Formed the DNF.
+
+@form_dnef
+go-to: miscparty
+view-if: dnef_formed == 0
+on-arrival: {!
+Q.dnef_formed = 1;
+!}
+
+Formed the DNEF.
 
 @editpartysupport
 
