@@ -377,6 +377,7 @@ Decreased relations with the KPD.
 
 @increaseddprel
 go-to: editrelations
+view-if: lvp_formed == 0
 on-arrival: {!
 Q.ddp_relation += 15;
 !}
@@ -385,6 +386,7 @@ Increased relations with the DDP.
 
 @decreaseddprel
 go-to: editrelations
+view-if: lvp_formed == 0
 on-arrival: {!
 Q.ddp_relation -= 15;
 !}
@@ -393,6 +395,7 @@ Decreased relations with the DDP.
 
 @increaselvprel
 go-to: editrelations
+view-if: lvp_formed == 1
 on-arrival: {!
 Q.lvp_relation += 15;
 !}
@@ -401,6 +404,7 @@ Increased relations with the LVP.
 
 @decreaselvprel
 go-to: editrelations
+view-if: lvp_formed == 1
 on-arrival: {!
 Q.lvp_relation -= 15;
 !}
@@ -409,6 +413,7 @@ Decreased relations with the LVP.
 
 @increasedvprel
 go-to: editrelations
+view-if: lvp_formed == 0
 on-arrival: {!
 Q.dvp_relation += 15;
 !}
@@ -417,6 +422,7 @@ Increased relations with the DVP.
 
 @decreasedvprel
 go-to: editrelations
+view-if: lvp_formed == 0
 on-arrival: {!
 Q.dvp_relation -= 15;
 !}
