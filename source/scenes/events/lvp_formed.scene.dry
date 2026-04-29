@@ -1,4 +1,3 @@
-title: lvp_formation
 on-arrival: {!
 
 Q.lvp_formed = 1;

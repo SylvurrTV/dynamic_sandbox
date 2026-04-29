@@ -1227,7 +1227,7 @@ Lowered Interior Police loyalty.
 - @ban_nsdap: Ban NSDAP
 - @unban_nsdap: Unban NSDAP
 - @form_sapd: Form SAPD (Requires High Internal Dissent)
-- @lvp_formation: Form LVP
+- @lvp_formed: Form LVP
 - @form_cvp: Form CVP
 - @form_kvp: Form KVP
 - @form_dnef: Form DNEF
