@@ -1226,12 +1226,12 @@ Lowered Interior Police loyalty.
 - @unban_kpd: Unban KPD
 - @ban_nsdap: Ban NSDAP
 - @unban_nsdap: Unban NSDAP
-- @form_sapd: Form SAPD (Requires High Internal Dissent)
+- @sapd_formed: Form SAPD
 - @lvp_formed: Form LVP
-- @form_cvp: Form CVP
-- @form_kvp: Form KVP
-- @form_dnef: Form DNEF
-- @form_dnf: Form DNF
+- @cvp_formed: Form CVP
+- @kvp_formed: Form KVP
+- @dnef_formed: Form DNEF
+- @dnf_formed: Form DNF
 - @returnsandbox: Return To Sandbox Menu
 
 @allow_banning
@@ -1278,51 +1278,6 @@ Q.nsdap_banned = 0;
 !}
 
 Unbanned the NSDAP.
-
-@form_sapd
-go-to: miscparty
-view-if: sapd_formed == 0
-on-arrival: {!
-Q.sapd_formed = 1;
-!}
-
-Formed the SAPD.
-
-@form_kvp
-go-to: miscparty
-view-if: kvp_formed == 0
-on-arrival: {!
-Q.kvp_formed = 1;
-!}
-
-Formed the KVP.
-
-@form_cvp
-go-to: miscparty
-view-if: cvp_formed == 0
-on-arrival: {!
-Q.cvp_formed = 1;
-!}
-
-Formed the CVP.
-
-@form_dnf
-go-to: miscparty
-view-if: dnf_formed == 0
-on-arrival: {!
-Q.dnf_formed = 1;
-!}
-
-Formed the DNF.
-
-@form_dnef
-go-to: miscparty
-view-if: dnef_formed == 0
-on-arrival: {!
-Q.dnef_formed = 1;
-!}
-
-Formed the DNEF.
 
 @editpartysupport
 
